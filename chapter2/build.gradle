@@ -1,0 +1,17 @@
+def projectVersion = "0.5"
+
+task Task3 {
+    description = "teste task 3 - Version: $projectVersion"
+
+    doFirst() {
+        println "doFirst da task3"
+    }
+
+    doLast() {
+        println "doLast da task3"
+    }
+}
+
+Task3 << {
+    println "Another Closure"
+}

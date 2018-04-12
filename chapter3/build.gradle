@@ -1,0 +1,7 @@
+task taskA {
+    description = "Task A"
+
+    doFirst() {
+        println "Teste A"
+    }
+}
