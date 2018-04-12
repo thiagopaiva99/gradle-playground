@@ -12,3 +12,5 @@ taskB.dependsOn taskE, taskF
 
 taskC.dependsOn taskE
 taskD.dependsOn taskE
+
+taskB.mustRunAfter taskC
