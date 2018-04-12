@@ -1,7 +1,14 @@
-task taskA {
-    description = "Task A"
+task taskA << { println "Task A" }
+task taskB << { println "Task B" }
+task taskC << { println "Task C" }
+task taskD << { println "Task D" }
+task taskE << { println "Task E" }
+task taskF << { println "Task F" }
 
-    doFirst() {
-        println "Teste A"
-    }
-}
+taskA.dependsOn taskB
+taskA.dependsOn taskC, taskD
+
+taskB.dependsOn taskE, taskF
+
+taskC.dependsOn taskE
+taskD.dependsOn taskE
